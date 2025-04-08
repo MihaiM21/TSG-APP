@@ -10,7 +10,7 @@
 -  Dockerized app with SQL Server
 -  Unit tests (backend)
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer       | Technology                         |
 |-------------|-------------------------------------|
@@ -89,6 +89,61 @@ dotnet test
 
 > Tests cover logic, validation, and PDF generation services.
 
+## Screenshots
+### Form page & Admin Page
+<p align=center>
+    <img src="img/Form_Page.png" width="800">
+    <img src="img/Admin_Page.png" width="800">
+</p>
+
+## 🌐 API Endpoints
+
+The ASP.NET Core backend exposes the following endpoints:
+
+###  `POST /api/form`
+
+- **Description**: Submit the student form.
+- **Request body**: JSON with student details (name, email, etc.)
+- **Response**: `200 OK` if successfully saved and PDF generated.
+- **Notes**: Automatically triggers PDF creation after submission.
+
+---
+
+###  `GET /api/form`
+
+- **Description**: Retrieve all submitted form entries.
+- **Response**: JSON array with all submissions.
+- **Access**: Open to all (no authentication).
+
+---
+
+###  `GET /api/form/{id}`
+
+- **Description**: Retrieve a specific entry by ID.
+- **Response**: JSON with the matching form data or `404 Not Found`.
+
+---
+
+###  `PUT /api/form/{id}`
+
+- **Description**: Update a specific submission.
+- **Request body**: JSON with updated data.
+- **Response**: `200 OK` if the update is successful.
+
+---
+
+###  `DELETE /api/form/{id}`
+
+- **Description**: Delete a specific submission.
+- **Response**: `204 No Content` if deletion is successful.
+
+---
+
+###  `GET /api/form/pdf/{id}`
+
+- **Description**: Download the PDF associated with a form submission.
+- **Response**: Returns a `.pdf` file for the given ID.
+- **Headers**: `Content-Type: application/pdf`
 
 ##  Additional Notes
 
