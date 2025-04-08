@@ -20,7 +20,7 @@
 | PDF         | QuestPDF                            |
 | Containers  | Docker, Docker Compose              |
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 student-form-app/
@@ -65,7 +65,7 @@ docker-compose up --build
 - The PDF is available for immediate download by the user.
 - The admin can also download PDFs at any time from the admin panel.
 
-## 🧑 Admin Panel
+##  Admin Panel
 
 - Accessible via a dedicated route (e.g., `/admin`)
 - Features:
@@ -96,7 +96,7 @@ dotnet test
 - Not yet deployed to any public server.
 - No authentication is used, assuming a trusted internal environment.
 
-## 🤝 Contributions
+##  Contributions
 
 This is an internal project. For improvements:
 
@@ -104,6 +104,6 @@ This is an internal project. For improvements:
 2. Make your changes
 3. Submit a merge request (for private GitHub/GitLab repos)
 
-## 🪪 License
+##  License
 
 This project is intended for internal use and has no public license attached.
