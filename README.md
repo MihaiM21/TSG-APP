@@ -98,12 +98,25 @@ dotnet test
 
 ## 🌐 API Endpoints
 
-The ASP.NET Core backend exposes the following endpoints:
+###  Access Swagger UI
+
+After running the backend, open: http://localhost:5000/swagger/index.html
+
+###  Features:
+
+- View all available endpoints
+- See request/response formats
+- Test endpoints directly in-browser
+- Easily debug or explore the API
+
+> Make sure the backend is running (`docker-compose up`) before accessing Swagger.
+
+### The ASP.NET Core backend exposes the following endpoints:
 
 ###  `POST /api/form`
 
 - **Description**: Submit the student form.
-- **Request body**: JSON with student details (name, email, etc.)
+- **Request body**: JSON with student details
 - **Response**: `200 OK` if successfully saved and PDF generated.
 - **Notes**: Automatically triggers PDF creation after submission.
 
@@ -139,11 +152,6 @@ The ASP.NET Core backend exposes the following endpoints:
 
 ---
 
-###  `GET /api/form/pdf/{id}`
-
-- **Description**: Download the PDF associated with a form submission.
-- **Response**: Returns a `.pdf` file for the given ID.
-- **Headers**: `Content-Type: application/pdf`
 
 ##  Additional Notes
 
